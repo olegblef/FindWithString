@@ -1,0 +1,16 @@
+//
+//  Renderable.swift
+//  FindWithString
+//
+//  Created by Oleh Blef on 9/20/19.
+//  Copyright © 2019 Oleh Podluzhnyi. All rights reserved.
+//
+
+import Foundation
+
+protocol Renderable: class {
+    
+    associatedtype ViewData
+    
+    func render(viewData: ViewData)
+}

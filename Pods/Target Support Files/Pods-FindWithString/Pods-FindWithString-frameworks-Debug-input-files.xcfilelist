@@ -1,0 +1,7 @@
+${PODS_ROOT}/Target Support Files/Pods-FindWithString/Pods-FindWithString-frameworks.sh
+${BUILT_PRODUCTS_DIR}/ReactiveCocoa/ReactiveCocoa.framework
+${BUILT_PRODUCTS_DIR}/ReactiveSwift/ReactiveSwift.framework
+${BUILT_PRODUCTS_DIR}/Realm/Realm.framework
+${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework
+${BUILT_PRODUCTS_DIR}/Result/Result.framework
+${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework
