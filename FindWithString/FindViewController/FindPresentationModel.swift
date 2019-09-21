@@ -53,7 +53,10 @@ final class FindPresentationModel: BasePresentationModel<FindViewData>,
     }
     
     private func addCash(_ value: Cash) {
-        self.cashArray.value?.append(value)
+        if value.1.count >= 3 {
+            self.cashArray.value?.append(value)
+            self.findText.value = nil
+        }
     }
 }
 
