@@ -10,12 +10,16 @@ import UIKit
 
 struct FindViewData: BaseViewData {
     
+    typealias Cash = (UIImage, String)
+    
     let findText: String?
+    let cashArray: [Cash]?
     let onUpdateFindText: ((String) -> ())?
-    let addCash: ((UIImage, String) -> ())?
+    let addCash: ((Cash) -> ())?
     
     static var initial: FindViewData {
         return FindViewData(findText: nil,
+                            cashArray: nil,
                             onUpdateFindText: nil,
                             addCash: nil)
     }

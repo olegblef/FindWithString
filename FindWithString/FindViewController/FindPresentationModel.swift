@@ -34,25 +34,28 @@ final class FindPresentationModel: BasePresentationModel<FindViewData>, FindPres
     // MARK - Private methods
 
     private func setupData() {
-        let signalProducer = SignalProducer(self.findText.producer)
+        let signalProducer = SignalProducer.combineLatest(self.findText.producer,
+                                                          self.cashArray.producer)
 
         signalProducer
             .take(during: self.lifetime)
             .observe(on: QueueScheduler.main)
             .startWithValues { [weak self] values in
                 if let self = self {
-                    let (findText) = values
+                    let (findText, cashArray) = values
                     self.dataInternal.value = ViewData(findText: findText,
+                                                       cashArray: cashArray,
                                                        onUpdateFindText: { [weak self] in
                                                         self?.findText.value = $0 },
-                                                       addCash: nil
+                                                       addCash: { [weak self] in
+                                                        self?.addCash($0) }
                     )
                 }
         }
     }
     
-    private func addCash(image: UIImage, text: String) {
-        self.cashArray.value?.append(Cash(image, text))
+    private func addCash(_ value: Cash) {
+        self.cashArray.value?.append(value)
     }
 }
 

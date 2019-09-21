@@ -13,15 +13,11 @@ import ReactiveCocoa
 final class FindViewController<Model: FindPresentationModelProtocol>:
                                 BasePresentationModelViewController<Model, FindView>,
                                 UITableViewDelegate,
-                                UITableViewDataSource {
+                                UITableViewDataSource, UITextFieldDelegate {
 
     // MARK: - Typealiases
     
     typealias Cash = (UIImage, String)
-    
-    // MARK: - Private properties
-    
-    private var filling = [(UIImage(named: "cat"), "cat"), (UIImage(named: "cat"), "cat")]
     
     // MARK: - Override methods
     
@@ -36,6 +32,8 @@ final class FindViewController<Model: FindPresentationModelProtocol>:
     private func configUI() {
         self.rootView?.tableView.delegate = self
         self.rootView?.tableView.dataSource = self
+        self.rootView?.findTextField.delegate = self
+        
         self.rootView?.tableView.register(FindTableViewCell.self, forCellReuseIdentifier: toString(FindTableViewCell.self))
         
         self.rootView?.findTextField.reactive.continuousTextValues.observeValues { [weak self] text in
@@ -46,14 +44,26 @@ final class FindViewController<Model: FindPresentationModelProtocol>:
     // MARK: - UITableViewDataSource
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.filling.count
+        return self.viewData.cashArray?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: toString(FindTableViewCell.self), for: indexPath) as! FindTableViewCell
-        let item = self.filling[indexPath.row]
-        cell.render(viewData: item as! FindTableViewCell.State)
+        let item = self.viewData.cashArray?[indexPath.row]
+        item.do {
+            cell.render(viewData: $0)
+        }
         return cell
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if textField == self.rootView?.findTextField {
+            self.viewData.addCash?(Cash(UIImage(named: "cat")!, textField.text ?? ""))
+            print(textField.text)
+            textField.text = nil
+            textField.resignFirstResponder()
+        }
+        return true
     }
 }
 

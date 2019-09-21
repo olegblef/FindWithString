@@ -82,6 +82,8 @@ final class FindView: ViewDataGettable<FindPresentationModel>, StandartView {
         findTextField.backgroundColor = self.textFieldsBackColor
         findTextField.textColor = self.textColor
         findTextField.tintColor = self.textColor
+        
+        findTextField.returnKeyType = .done
     }
     
     private func setupTableView() {
