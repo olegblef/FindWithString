@@ -10,6 +10,7 @@
 		264339F2CE43BD9D9CC94516 /* Pods_FindWithStringTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3033C92F31AC4BA12A676CB6 /* Pods_FindWithStringTests.framework */; };
 		B05A39146291544F30A71B72 /* Pods_FindWithString.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2DDB2582A8C74C05F86F5FA /* Pods_FindWithString.framework */; };
 		FC2FF52523368258008A9DA7 /* Optional+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2FF52423368258008A9DA7 /* Optional+Extension.swift */; };
+		FC2FF5322336D6AD008A9DA7 /* Cashable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2FF5312336D6AD008A9DA7 /* Cashable.swift */; };
 		FCB0FCB1233559FF0072E5F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB0FCB0233559FF0072E5F9 /* AppDelegate.swift */; };
 		FCB0FCB3233559FF0072E5F9 /* FindViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB0FCB2233559FF0072E5F9 /* FindViewController.swift */; };
 		FCB0FCB823355A010072E5F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FCB0FCB723355A010072E5F9 /* Assets.xcassets */; };
@@ -53,6 +54,7 @@
 		B2956EA1870D05737EFABEB9 /* Pods-FindWithStringTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FindWithStringTests.release.xcconfig"; path = "Target Support Files/Pods-FindWithStringTests/Pods-FindWithStringTests.release.xcconfig"; sourceTree = "<group>"; };
 		D2DDB2582A8C74C05F86F5FA /* Pods_FindWithString.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FindWithString.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC2FF52423368258008A9DA7 /* Optional+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Optional+Extension.swift"; sourceTree = "<group>"; };
+		FC2FF5312336D6AD008A9DA7 /* Cashable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cashable.swift; sourceTree = "<group>"; };
 		FCB0FCAD233559FF0072E5F9 /* FindWithString.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FindWithString.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCB0FCB0233559FF0072E5F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FCB0FCB2233559FF0072E5F9 /* FindViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindViewController.swift; sourceTree = "<group>"; };
@@ -179,6 +181,7 @@
 			isa = PBXGroup;
 			children = (
 				FCC3E00F23355DDD00142EA1 /* RootViewGettable.swift */,
+				FC2FF5312336D6AD008A9DA7 /* Cashable.swift */,
 				FCC3E0232335671100142EA1 /* StandartView.swift */,
 				FCC3E01523355F8B00142EA1 /* PresentationModelProtocol.swift */,
 				FCC3E01723355FCC00142EA1 /* Renderable.swift */,
@@ -407,6 +410,7 @@
 				FCC3E00E23355DA100142EA1 /* FindPresentationModel.swift in Sources */,
 				FCC3E02A233578F000142EA1 /* PaddingLabel.swift in Sources */,
 				FCC3E022233565D600142EA1 /* BaseViewController.swift in Sources */,
+				FC2FF5322336D6AD008A9DA7 /* Cashable.swift in Sources */,
 				FCC3E00A23355D7D00142EA1 /* FindView.swift in Sources */,
 				FCC3E01C233561D100142EA1 /* BasePresentationModel.swift in Sources */,
 				FCC3E01A2335603500142EA1 /* FindPresentationModelProtocol.swift in Sources */,

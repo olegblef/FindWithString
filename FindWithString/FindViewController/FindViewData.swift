@@ -8,9 +8,7 @@
 
 import UIKit
 
-struct FindViewData: BaseViewData {
-    
-    typealias Cash = (UIImage, String)
+struct FindViewData: BaseViewData, Cashable {
     
     let findText: String?
     let cashArray: [Cash]?

@@ -8,13 +8,11 @@
 
 import UIKit
 
-class FindTableViewCell: UITableViewCell, Renderable {
+class FindTableViewCell: UITableViewCell, Renderable, Cashable {
     
     // MARK: - Typealiases
     
     typealias ViewData = Cash
-    
-    typealias Cash = (UIImage, String)
 
     // MARK: - Internal properties
 

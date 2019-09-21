@@ -9,11 +9,9 @@
 import Foundation
 import ReactiveSwift
 
-final class FindPresentationModel: BasePresentationModel<FindViewData>, FindPresentationModelProtocol {
-
-    // MARK: - Typealiases
-    
-    typealias Cash = (UIImage, String)
+final class FindPresentationModel: BasePresentationModel<FindViewData>,
+                                   FindPresentationModelProtocol,
+                                   Cashable {
     
     // MARK: - Private properties
     

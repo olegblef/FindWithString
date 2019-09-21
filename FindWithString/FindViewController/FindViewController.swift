@@ -14,11 +14,8 @@ final class FindViewController<Model: FindPresentationModelProtocol>:
                                 BasePresentationModelViewController<Model, FindView>,
                                 UITableViewDelegate,
                                 UITableViewDataSource,
-                                UITextFieldDelegate {
-
-    // MARK: - Typealiases
-    
-    typealias Cash = (UIImage, String)
+                                UITextFieldDelegate,
+                                Cashable {
     
     // MARK: - Override methods
     
