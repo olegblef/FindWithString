@@ -21,7 +21,7 @@ final class FindPresentationModel: BasePresentationModel<FindViewData>, FindPres
 
     private let findText = MutableProperty<String?>(nil)
     
-    private let cashArray = MutableProperty<[Cash]?>(nil)
+    private let cashArray = MutableProperty<[Cash]?>([])
     
     // MARK: - Initializations and Deallocations
     

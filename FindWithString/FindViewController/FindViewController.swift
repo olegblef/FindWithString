@@ -13,7 +13,8 @@ import ReactiveCocoa
 final class FindViewController<Model: FindPresentationModelProtocol>:
                                 BasePresentationModelViewController<Model, FindView>,
                                 UITableViewDelegate,
-                                UITableViewDataSource, UITextFieldDelegate {
+                                UITableViewDataSource,
+                                UITextFieldDelegate {
 
     // MARK: - Typealiases
     
@@ -41,6 +42,14 @@ final class FindViewController<Model: FindPresentationModelProtocol>:
         }
     }
     
+    private func getAlert() {
+        let alertController = UIAlertController(title: "Sorry", message: "We don't have this image", preferredStyle: .alert)
+        
+        alertController.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+        
+        self.present(alertController, animated: true, completion: nil)
+    }
+    
     // MARK: - UITableViewDataSource
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -58,10 +67,36 @@ final class FindViewController<Model: FindPresentationModelProtocol>:
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if textField == self.rootView?.findTextField {
-            self.viewData.addCash?(Cash(UIImage(named: "cat")!, textField.text ?? ""))
-            print(textField.text)
-            textField.text = nil
-            textField.resignFirstResponder()
+            let publicKey = "9a471a89261b9a66742a4cad58e65028a926e04fe462b60c754827fa4196abfe"
+            let privateKey = "800ac52a5eea1185b24036154a24cdc2a7f0dcb97781c61766f569e3dfb0a7ba"
+ 
+            let config = URLSessionConfiguration.default
+            let session = URLSession(configuration: config)
+            if let url = URL(string: "https://api.unsplash.com/") {
+                
+                let task = session.dataTask(with: url, completionHandler: {data, response, error in
+                    
+                    if let err = error {
+                        print("Error: \(err)")
+                        return
+                    }
+                    
+                    if let http = response as? HTTPURLResponse {
+                        if http.statusCode == 200 {
+                            let downloadedImage = UIImage(data: data!)
+                            DispatchQueue.main.async { [weak self] in
+                                self?.viewData.addCash?(Cash(downloadedImage ?? UIImage(named: "cat")!, textField.text ?? ""))
+                                textField.text = nil
+                                textField.resignFirstResponder()
+                            }
+                        } else {
+                            self.getAlert()
+                        }
+                    }
+                })
+                task.resume()
+            }
+            
         }
         return true
     }

@@ -12,9 +12,9 @@ class FindTableViewCell: UITableViewCell, Renderable {
     
     // MARK: - Typealiases
     
-    typealias ViewData = State
+    typealias ViewData = Cash
     
-    typealias State = (UIImage, String)
+    typealias Cash = (UIImage, String)
 
     // MARK: - Internal properties
 
@@ -113,7 +113,7 @@ class FindTableViewCell: UITableViewCell, Renderable {
 
     // MARK: - Renderable
 
-    func render(viewData state: State) {
+    func render(viewData state: Cash) {
         self.label.text = state.1
         self.photo.image = state.0
 //        self.state = state
