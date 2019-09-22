@@ -9,10 +9,6 @@
 import UIKit
 
 class FindTableViewCell: UITableViewCell, Renderable, Cashable {
-    
-    // MARK: - Typealiases
-    
-    typealias ViewData = Cash
 
     // MARK: - Private properties
 
@@ -102,7 +98,7 @@ class FindTableViewCell: UITableViewCell, Renderable, Cashable {
     // MARK: - Renderable
 
     func render(viewData state: Cash) {
-        self.label.text = state.1
-        self.photo.image = imageFromString(state.0)
+        self.label.text = state.text
+        self.photo.image = imageFromString(state.pathString)
     }
 }

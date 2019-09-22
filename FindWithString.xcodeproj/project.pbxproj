@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		264339F2CE43BD9D9CC94516 /* Pods_FindWithStringTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3033C92F31AC4BA12A676CB6 /* Pods_FindWithStringTests.framework */; };
 		B05A39146291544F30A71B72 /* Pods_FindWithString.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2DDB2582A8C74C05F86F5FA /* Pods_FindWithString.framework */; };
 		FC2FF52523368258008A9DA7 /* Optional+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2FF52423368258008A9DA7 /* Optional+Extension.swift */; };
 		FC2FF5322336D6AD008A9DA7 /* Cashable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2FF5312336D6AD008A9DA7 /* Cashable.swift */; };
@@ -17,7 +16,6 @@
 		FCA329DE233758BC00CE4DDF /* SharedCashRealmService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA329DD233758BC00CE4DDF /* SharedCashRealmService.swift */; };
 		FCA329E023378F2D00CE4DDF /* Unsplash.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA329DF23378F2D00CE4DDF /* Unsplash.swift */; };
 		FCA329E82337B8D000CE4DDF /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA329E72337B8D000CE4DDF /* APIService.swift */; };
-		FCA329EA2337C56100CE4DDF /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA329E92337C56100CE4DDF /* Storage.swift */; };
 		FCA329EC2337CAE700CE4DDF /* imageFromString.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA329EB2337CAE700CE4DDF /* imageFromString.swift */; };
 		FCA329EF2337DC9500CE4DDF /* ImageDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA329EE2337DC9500CE4DDF /* ImageDataProvider.swift */; };
 		FCA329F12337F80800CE4DDF /* ImageCashe.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA329F02337F80800CE4DDF /* ImageCashe.swift */; };
@@ -25,7 +23,6 @@
 		FCB0FCB3233559FF0072E5F9 /* FindViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB0FCB2233559FF0072E5F9 /* FindViewController.swift */; };
 		FCB0FCB823355A010072E5F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FCB0FCB723355A010072E5F9 /* Assets.xcassets */; };
 		FCB0FCBB23355A010072E5F9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCB0FCB923355A010072E5F9 /* LaunchScreen.storyboard */; };
-		FCB0FCC623355A020072E5F9 /* FindWithStringTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB0FCC523355A020072E5F9 /* FindWithStringTests.swift */; };
 		FCC3E00A23355D7D00142EA1 /* FindView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC3E00923355D7D00142EA1 /* FindView.swift */; };
 		FCC3E00C23355D9200142EA1 /* FindViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC3E00B23355D9200142EA1 /* FindViewData.swift */; };
 		FCC3E00E23355DA100142EA1 /* FindPresentationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC3E00D23355DA100142EA1 /* FindPresentationModel.swift */; };
@@ -46,22 +43,9 @@
 		FCC3E02C23357DB600142EA1 /* toString.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC3E02B23357DB600142EA1 /* toString.swift */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		FCB0FCC223355A020072E5F9 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FCB0FCA5233559FF0072E5F9 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = FCB0FCAC233559FF0072E5F9;
-			remoteInfo = FindWithString;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
 		0D96111B5DD8DC7096033854 /* Pods-FindWithString.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FindWithString.release.xcconfig"; path = "Target Support Files/Pods-FindWithString/Pods-FindWithString.release.xcconfig"; sourceTree = "<group>"; };
-		3033C92F31AC4BA12A676CB6 /* Pods_FindWithStringTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FindWithStringTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		59C16BDDE436C6AB571EF42C /* Pods-FindWithStringTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FindWithStringTests.debug.xcconfig"; path = "Target Support Files/Pods-FindWithStringTests/Pods-FindWithStringTests.debug.xcconfig"; sourceTree = "<group>"; };
 		AE0129672C1DE00B8C37A258 /* Pods-FindWithString.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FindWithString.debug.xcconfig"; path = "Target Support Files/Pods-FindWithString/Pods-FindWithString.debug.xcconfig"; sourceTree = "<group>"; };
-		B2956EA1870D05737EFABEB9 /* Pods-FindWithStringTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FindWithStringTests.release.xcconfig"; path = "Target Support Files/Pods-FindWithStringTests/Pods-FindWithStringTests.release.xcconfig"; sourceTree = "<group>"; };
 		D2DDB2582A8C74C05F86F5FA /* Pods_FindWithString.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FindWithString.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC2FF52423368258008A9DA7 /* Optional+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Optional+Extension.swift"; sourceTree = "<group>"; };
 		FC2FF5312336D6AD008A9DA7 /* Cashable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cashable.swift; sourceTree = "<group>"; };
@@ -71,7 +55,6 @@
 		FCA329DD233758BC00CE4DDF /* SharedCashRealmService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedCashRealmService.swift; sourceTree = "<group>"; };
 		FCA329DF23378F2D00CE4DDF /* Unsplash.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Unsplash.swift; sourceTree = "<group>"; };
 		FCA329E72337B8D000CE4DDF /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
-		FCA329E92337C56100CE4DDF /* Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
 		FCA329EB2337CAE700CE4DDF /* imageFromString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = imageFromString.swift; sourceTree = "<group>"; };
 		FCA329EE2337DC9500CE4DDF /* ImageDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDataProvider.swift; sourceTree = "<group>"; };
 		FCA329F02337F80800CE4DDF /* ImageCashe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCashe.swift; sourceTree = "<group>"; };
@@ -81,9 +64,6 @@
 		FCB0FCB723355A010072E5F9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FCB0FCBA23355A010072E5F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FCB0FCBC23355A010072E5F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FCB0FCC123355A020072E5F9 /* FindWithStringTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FindWithStringTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		FCB0FCC523355A020072E5F9 /* FindWithStringTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindWithStringTests.swift; sourceTree = "<group>"; };
-		FCB0FCC723355A020072E5F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FCC3E00923355D7D00142EA1 /* FindView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindView.swift; sourceTree = "<group>"; };
 		FCC3E00B23355D9200142EA1 /* FindViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindViewData.swift; sourceTree = "<group>"; };
 		FCC3E00D23355DA100142EA1 /* FindPresentationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindPresentationModel.swift; sourceTree = "<group>"; };
@@ -113,14 +93,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FCB0FCBE23355A020072E5F9 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				264339F2CE43BD9D9CC94516 /* Pods_FindWithStringTests.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -128,7 +100,6 @@
 			isa = PBXGroup;
 			children = (
 				D2DDB2582A8C74C05F86F5FA /* Pods_FindWithString.framework */,
-				3033C92F31AC4BA12A676CB6 /* Pods_FindWithStringTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -138,8 +109,6 @@
 			children = (
 				AE0129672C1DE00B8C37A258 /* Pods-FindWithString.debug.xcconfig */,
 				0D96111B5DD8DC7096033854 /* Pods-FindWithString.release.xcconfig */,
-				59C16BDDE436C6AB571EF42C /* Pods-FindWithStringTests.debug.xcconfig */,
-				B2956EA1870D05737EFABEB9 /* Pods-FindWithStringTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -151,7 +120,6 @@
 				FCA329D92337580C00CE4DDF /* SharedCashRealm.swift */,
 				FCA329DB2337588300CE4DDF /* RealmService.swift */,
 				FCA329DD233758BC00CE4DDF /* SharedCashRealmService.swift */,
-				FCA329E92337C56100CE4DDF /* Storage.swift */,
 			);
 			path = RealmService;
 			sourceTree = "<group>";
@@ -178,7 +146,6 @@
 			isa = PBXGroup;
 			children = (
 				FCB0FCAF233559FF0072E5F9 /* FindWithString */,
-				FCB0FCC423355A020072E5F9 /* FindWithStringTests */,
 				FCB0FCAE233559FF0072E5F9 /* Products */,
 				5A420DAFB4CBF87B82C40BB8 /* Pods */,
 				55ED19FBED95F18E3C42DEE2 /* Frameworks */,
@@ -189,7 +156,6 @@
 			isa = PBXGroup;
 			children = (
 				FCB0FCAD233559FF0072E5F9 /* FindWithString.app */,
-				FCB0FCC123355A020072E5F9 /* FindWithStringTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -208,15 +174,6 @@
 				FCB0FCBC23355A010072E5F9 /* Info.plist */,
 			);
 			path = FindWithString;
-			sourceTree = "<group>";
-		};
-		FCB0FCC423355A020072E5F9 /* FindWithStringTests */ = {
-			isa = PBXGroup;
-			children = (
-				FCB0FCC523355A020072E5F9 /* FindWithStringTests.swift */,
-				FCB0FCC723355A020072E5F9 /* Info.plist */,
-			);
-			path = FindWithStringTests;
 			sourceTree = "<group>";
 		};
 		FCC3E00323355C3600142EA1 /* Base */ = {
@@ -309,25 +266,6 @@
 			productReference = FCB0FCAD233559FF0072E5F9 /* FindWithString.app */;
 			productType = "com.apple.product-type.application";
 		};
-		FCB0FCC023355A020072E5F9 /* FindWithStringTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = FCB0FCCD23355A020072E5F9 /* Build configuration list for PBXNativeTarget "FindWithStringTests" */;
-			buildPhases = (
-				74C6DCAC180BF40B472FE93D /* [CP] Check Pods Manifest.lock */,
-				FCB0FCBD23355A020072E5F9 /* Sources */,
-				FCB0FCBE23355A020072E5F9 /* Frameworks */,
-				FCB0FCBF23355A020072E5F9 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				FCB0FCC323355A020072E5F9 /* PBXTargetDependency */,
-			);
-			name = FindWithStringTests;
-			productName = FindWithStringTests;
-			productReference = FCB0FCC123355A020072E5F9 /* FindWithStringTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -340,10 +278,6 @@
 				TargetAttributes = {
 					FCB0FCAC233559FF0072E5F9 = {
 						CreatedOnToolsVersion = 10.2.1;
-					};
-					FCB0FCC023355A020072E5F9 = {
-						CreatedOnToolsVersion = 10.2.1;
-						TestTargetID = FCB0FCAC233559FF0072E5F9;
 					};
 				};
 			};
@@ -361,7 +295,6 @@
 			projectRoot = "";
 			targets = (
 				FCB0FCAC233559FF0072E5F9 /* FindWithString */,
-				FCB0FCC023355A020072E5F9 /* FindWithStringTests */,
 			);
 		};
 /* End PBXProject section */
@@ -376,38 +309,9 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FCB0FCBF23355A020072E5F9 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		74C6DCAC180BF40B472FE93D /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-FindWithStringTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
 		925110CD4669D8DA63EF33F0 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -484,28 +388,11 @@
 				FCC3E00C23355D9200142EA1 /* FindViewData.swift in Sources */,
 				FCC3E02C23357DB600142EA1 /* toString.swift in Sources */,
 				FCA329DE233758BC00CE4DDF /* SharedCashRealmService.swift in Sources */,
-				FCA329EA2337C56100CE4DDF /* Storage.swift in Sources */,
 				FCA329DC2337588300CE4DDF /* RealmService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FCB0FCBD23355A020072E5F9 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				FCB0FCC623355A020072E5F9 /* FindWithStringTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		FCB0FCC323355A020072E5F9 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = FCB0FCAC233559FF0072E5F9 /* FindWithString */;
-			targetProxy = FCB0FCC223355A020072E5F9 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		FCB0FCB923355A010072E5F9 /* LaunchScreen.storyboard */ = {
@@ -673,50 +560,6 @@
 			};
 			name = Release;
 		};
-		FCB0FCCE23355A020072E5F9 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 59C16BDDE436C6AB571EF42C /* Pods-FindWithStringTests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = K33J7AD8C7;
-				INFOPLIST_FILE = FindWithStringTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = HomeWork.FindWithStringTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FindWithString.app/FindWithString";
-			};
-			name = Debug;
-		};
-		FCB0FCCF23355A020072E5F9 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = B2956EA1870D05737EFABEB9 /* Pods-FindWithStringTests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = K33J7AD8C7;
-				INFOPLIST_FILE = FindWithStringTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = HomeWork.FindWithStringTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FindWithString.app/FindWithString";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -734,15 +577,6 @@
 			buildConfigurations = (
 				FCB0FCCB23355A020072E5F9 /* Debug */,
 				FCB0FCCC23355A020072E5F9 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		FCB0FCCD23355A020072E5F9 /* Build configuration list for PBXNativeTarget "FindWithStringTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				FCB0FCCE23355A020072E5F9 /* Debug */,
-				FCB0FCCF23355A020072E5F9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

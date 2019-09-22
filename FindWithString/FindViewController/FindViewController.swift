@@ -69,7 +69,7 @@ final class FindViewController<Model: FindPresentationModelProtocol>:
             textField.text.do { [weak self] text in
                 service.getImage(text: text,
                                  completion: {
-                                    self?.viewData.addCash?(Cash($0, text))
+                                    self?.viewData.addCash?(SharedCashRealm(cash: SharedCash(pathString: $0, text: text)))
                                     textField.resignFirstResponder()
                 },
                                  alert: {

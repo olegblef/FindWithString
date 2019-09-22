@@ -21,15 +21,20 @@ final class FindPresentationModel: BasePresentationModel<FindViewData>,
 
     private let findText = MutableProperty<String?>(nil)
     
-    private let cashArray = MutableProperty<[Cash]?>([])
+    private let cashArray = MutableProperty<[SharedCashRealm]?>([])
     
     // MARK: - Initializations and Deallocations
     
     init(_ store: SharedCashRealmService) {
         let dataInternal = MutableProperty<FindViewData>(FindViewData.initial)
         self.store = store
+        let a = self.store.get()
         super.init(dataInternal: dataInternal)
         self.setupData()
+        a?.forEach {
+            print($0.text)
+            self.cashArray.value?.append($0)
+        }
     }
 
     // MARK - Private methods
@@ -56,7 +61,7 @@ final class FindPresentationModel: BasePresentationModel<FindViewData>,
     }
     
     private func addCash(_ value: Cash) {
-        self.saveRequest(SharedCash(pathString: value.0, text: value.1))
+        self.saveRequest(SharedCash(pathString: value.pathString, text: value.text))
         self.cashArray.value?.append(value)
         self.findText.value = nil
     }

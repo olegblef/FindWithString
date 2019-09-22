@@ -9,6 +9,6 @@
 import UIKit
 
 protocol Cashable {
-    typealias Cash = (String, String)
+    typealias Cash = SharedCashRealm
 }
 

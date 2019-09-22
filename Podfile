@@ -10,9 +10,5 @@ pod 'ReactiveSwift', '~> 5.0'
 pod 'ReactiveCocoa', '~> 9.0'
 pod 'RealmSwift'
 pod 'SnapKit'
-  target 'FindWithStringTests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
 
 end
