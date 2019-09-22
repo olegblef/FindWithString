@@ -12,18 +12,18 @@ final class ImageCache {
     
     // MARK: - Private properties
     
-    private let cache = NSCache<NSURL, CGImage>()
+    private let cache = NSCache<NSURL, UIImage>()
     private let queue = DispatchQueue(label: "imageCacheQueue", qos: .utility)
     
     // MARK: - Internet methods
     
-    func store(image: CGImage, for url: URL) {
+    func store(image: UIImage, for url: URL) {
         self.queue.async { [weak self] in
             self?.cache.setObject(image, forKey: url as NSURL)
         }
     }
     
-    func image(for url: URL) -> CGImage? {
+    func image(for url: URL) -> UIImage? {
         return self.cache.object(forKey: url as NSURL)
     }
 }

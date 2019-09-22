@@ -91,6 +91,6 @@ final class FindView: ViewDataGettable<FindPresentationModel>, StandartView {
         let tableView = self.tableView
         
         tableView.separatorStyle = .none
-        tableView.estimatedRowHeight = 81
+        tableView.estimatedRowHeight = UITableView.automaticDimension
     }
 }

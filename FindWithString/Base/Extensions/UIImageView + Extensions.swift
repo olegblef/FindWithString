@@ -12,7 +12,7 @@ extension UIImageView {
     func load(_ string: String) {
         ImageDataProvider.shared.load(urlString: string) { [weak self] cg in
             DispatchQueue.main.async {
-                self?.image = UIImage(cgImage: cg)
+                self?.image = cg
             }
         }
     }

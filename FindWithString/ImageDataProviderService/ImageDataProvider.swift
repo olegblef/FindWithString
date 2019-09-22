@@ -21,12 +21,12 @@ final class ImageDataProvider {
     // MARK: - Private properties
     
     private lazy var session = URLSession(configuration: .default)
-    private let fileManager = FileManager()
+    private let realmManager = SharedCashRealmService()
     private let cache = ImageCache()
     
     // MARK: - Internal methods
     
-    func load(urlString: String, handler: @escaping ((CGImage) -> Void)) {
+    func load(urlString: String, handler: @escaping ((UIImage) -> Void)) {
         guard let url = URL(string: urlString) else { return }
         DispatchQueue.global(qos: .utility).async {
             if let cachedImage = self.cache.image(for: url) {
@@ -35,38 +35,24 @@ final class ImageDataProvider {
             }
             
             self.session.downloadTask(with: url) { [weak self] locationUrl, response, error in
-                self?.handleDownload(response: response, locationUrl: locationUrl, handler: handler) }
+                self?.download(urlResponse: locationUrl, handler: handler) }
                 .resume()
         }
     }
     
       // MARK - Private methods
     
-    private func handleDownload(response: URLResponse?, locationUrl: URL?, handler: @escaping ((CGImage) -> Void)) {
-        guard
-            let responseUrl = response?.url,
-            let locationUrl = locationUrl
-            else { return }
-        
-        do {
-            let directory = try
-                self.fileManager.url(for: .documentDirectory,
-                                     in: .userDomainMask,
-                                     appropriateFor: nil,
-                                     create: true)
-                    .appendingPathComponent(locationUrl.lastPathComponent)
-            
-            try self.fileManager.copyItem(at: locationUrl, to: directory)
-            
-            guard
-                let imageSource = CGImageSourceCreateWithURL(directory as NSURL, nil),
-                let image = CGImageSourceCreateImageAtIndex(imageSource, 0, nil)
-                else { print(#function, "couldn't load or create image source in \(directory)"); return }
-            
-            self.cache.store(image: image, for: responseUrl)
-            handler(image)
-        } catch {
-            fatalError(error.localizedDescription)
+    private func download(urlResponse: URL?, handler: @escaping ((UIImage) -> Void)) {
+        let manager = self.realmManager
+        let urlResponse = toString(urlResponse!)
+        guard let url = URL(string: urlResponse) else { return }
+       
+        manager.get()?.forEach {
+            if urlResponse == $0.pathString {
+                let image = imageFromString(urlResponse)
+                self.cache.store(image: image, for: url)
+                handler(image)
+            }
         }
     }
 }
