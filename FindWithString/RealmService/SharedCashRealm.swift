@@ -9,13 +9,18 @@
 import Foundation
 import RealmSwift
 
-@objcMembers class SharedInfoRealm: Object {
+@objcMembers class SharedCashRealm: Object {
+    
+    // MARK: - Dynamic properties
+    
     dynamic var image: UIImage = UIImage()
     dynamic var text: String = ""
     
-    convenience init(info: SharedInfo) {
+    // MARK: - Initializations and Deallocations
+    
+    convenience init(cash: SharedCash) {
         self.init()
-        self.image = info.image
-        self.text = info.text
+        self.image = cash.image
+        self.text = cash.text
     }
 }

@@ -79,11 +79,12 @@ final class FindViewController<Model: FindPresentationModelProtocol>:
                     }
                     
                     if let http = response as? HTTPURLResponse {
+                        guard let image = UIImage(named: "cat") else { return }
                         if http.statusCode == 200 {
                             data.do {
                                 let downloadedImage = UIImage(data: $0)
                                 DispatchQueue.main.async { [weak self] in
-                                    self?.viewData.addCash?(Cash(downloadedImage ?? UIImage(named: "cat")!, textField.text ?? ""))
+                                    self?.viewData.addCash?(Cash(downloadedImage ?? image, textField.text ?? ""))
                                     textField.resignFirstResponder()
                                 }
                             }

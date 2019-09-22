@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SharedInfo: Equatable {
+class SharedCash: Equatable {
     
     // MARK: - Internal properties
     
@@ -24,7 +24,7 @@ class SharedInfo: Equatable {
     
     // MARK: - Static methods
     
-    static func == (lhs: SharedInfo, rhs: SharedInfo) -> Bool {
+    static func == (lhs: SharedCash, rhs: SharedCash) -> Bool {
         if lhs.image == rhs.image && lhs.text == rhs.text {
             return true
         } else {

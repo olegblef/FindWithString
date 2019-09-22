@@ -9,22 +9,27 @@
 import Foundation
 import RealmSwift
 
-class SharedInfoRealmService {
+class SharedCashRealmService {
+    
+    // MARK: - Private properties
+    
     private let realmService = RealmService()
     
-    public func create(info: SharedInfoRealm) {
-        self.realmService.create(info)
+    // MARK: - Public methods
+    
+    public func create(cash: SharedCashRealm) {
+        self.realmService.create(cash)
     }
     
-    public func update(object: SharedInfoRealm, dict: [String: String?]) {
+    public func update(object: SharedCashRealm, dict: [String: String?]) {
         self.realmService.update(object, with: dict)
     }
     
-    public func delete(object: SharedInfoRealm) {
+    public func delete(object: SharedCashRealm) {
         self.realmService.delete(object)
     }
     
-    public func get() -> Results<SharedInfoRealm>? {
+    public func get() -> Results<SharedCashRealm>? {
         return self.realmService.get()
     }
 }

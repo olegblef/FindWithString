@@ -11,10 +11,10 @@
 		B05A39146291544F30A71B72 /* Pods_FindWithString.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2DDB2582A8C74C05F86F5FA /* Pods_FindWithString.framework */; };
 		FC2FF52523368258008A9DA7 /* Optional+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2FF52423368258008A9DA7 /* Optional+Extension.swift */; };
 		FC2FF5322336D6AD008A9DA7 /* Cashable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2FF5312336D6AD008A9DA7 /* Cashable.swift */; };
-		FCA329D82337577B00CE4DDF /* SharedInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA329D72337577B00CE4DDF /* SharedInfo.swift */; };
-		FCA329DA2337580C00CE4DDF /* SharedInfoRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA329D92337580C00CE4DDF /* SharedInfoRealm.swift */; };
+		FCA329D82337577B00CE4DDF /* SharedCash.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA329D72337577B00CE4DDF /* SharedCash.swift */; };
+		FCA329DA2337580C00CE4DDF /* SharedCashRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA329D92337580C00CE4DDF /* SharedCashRealm.swift */; };
 		FCA329DC2337588300CE4DDF /* RealmService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA329DB2337588300CE4DDF /* RealmService.swift */; };
-		FCA329DE233758BC00CE4DDF /* SharedInfoRealmService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA329DD233758BC00CE4DDF /* SharedInfoRealmService.swift */; };
+		FCA329DE233758BC00CE4DDF /* SharedCashRealmService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA329DD233758BC00CE4DDF /* SharedCashRealmService.swift */; };
 		FCB0FCB1233559FF0072E5F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB0FCB0233559FF0072E5F9 /* AppDelegate.swift */; };
 		FCB0FCB3233559FF0072E5F9 /* FindViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB0FCB2233559FF0072E5F9 /* FindViewController.swift */; };
 		FCB0FCB823355A010072E5F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FCB0FCB723355A010072E5F9 /* Assets.xcassets */; };
@@ -59,10 +59,10 @@
 		D2DDB2582A8C74C05F86F5FA /* Pods_FindWithString.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FindWithString.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC2FF52423368258008A9DA7 /* Optional+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Optional+Extension.swift"; sourceTree = "<group>"; };
 		FC2FF5312336D6AD008A9DA7 /* Cashable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cashable.swift; sourceTree = "<group>"; };
-		FCA329D72337577B00CE4DDF /* SharedInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedInfo.swift; sourceTree = "<group>"; };
-		FCA329D92337580C00CE4DDF /* SharedInfoRealm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedInfoRealm.swift; sourceTree = "<group>"; };
+		FCA329D72337577B00CE4DDF /* SharedCash.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedCash.swift; sourceTree = "<group>"; };
+		FCA329D92337580C00CE4DDF /* SharedCashRealm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedCashRealm.swift; sourceTree = "<group>"; };
 		FCA329DB2337588300CE4DDF /* RealmService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmService.swift; sourceTree = "<group>"; };
-		FCA329DD233758BC00CE4DDF /* SharedInfoRealmService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedInfoRealmService.swift; sourceTree = "<group>"; };
+		FCA329DD233758BC00CE4DDF /* SharedCashRealmService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedCashRealmService.swift; sourceTree = "<group>"; };
 		FCB0FCAD233559FF0072E5F9 /* FindWithString.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FindWithString.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCB0FCB0233559FF0072E5F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FCB0FCB2233559FF0072E5F9 /* FindViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindViewController.swift; sourceTree = "<group>"; };
@@ -135,10 +135,10 @@
 		FCA329D52337571600CE4DDF /* RealmService */ = {
 			isa = PBXGroup;
 			children = (
-				FCA329D72337577B00CE4DDF /* SharedInfo.swift */,
-				FCA329D92337580C00CE4DDF /* SharedInfoRealm.swift */,
+				FCA329D72337577B00CE4DDF /* SharedCash.swift */,
+				FCA329D92337580C00CE4DDF /* SharedCashRealm.swift */,
 				FCA329DB2337588300CE4DDF /* RealmService.swift */,
-				FCA329DD233758BC00CE4DDF /* SharedInfoRealmService.swift */,
+				FCA329DD233758BC00CE4DDF /* SharedCashRealmService.swift */,
 			);
 			path = RealmService;
 			sourceTree = "<group>";
@@ -440,19 +440,19 @@
 				FCC3E022233565D600142EA1 /* BaseViewController.swift in Sources */,
 				FC2FF5322336D6AD008A9DA7 /* Cashable.swift in Sources */,
 				FCC3E00A23355D7D00142EA1 /* FindView.swift in Sources */,
-				FCA329DA2337580C00CE4DDF /* SharedInfoRealm.swift in Sources */,
+				FCA329DA2337580C00CE4DDF /* SharedCashRealm.swift in Sources */,
 				FCC3E01C233561D100142EA1 /* BasePresentationModel.swift in Sources */,
 				FCC3E01A2335603500142EA1 /* FindPresentationModelProtocol.swift in Sources */,
 				FCC3E0242335671100142EA1 /* StandartView.swift in Sources */,
 				FCC3E01223355E0000142EA1 /* cast.swift in Sources */,
 				FCC3E01E2335621200142EA1 /* BaseViewData.swift in Sources */,
-				FCA329D82337577B00CE4DDF /* SharedInfo.swift in Sources */,
+				FCA329D82337577B00CE4DDF /* SharedCash.swift in Sources */,
 				FCC3E01423355F5D00142EA1 /* ViewDataGettable.swift in Sources */,
 				FCC3E0202335654000142EA1 /* BasePresentationModelViewController.swift in Sources */,
 				FCC3E01623355F8B00142EA1 /* PresentationModelProtocol.swift in Sources */,
 				FCC3E00C23355D9200142EA1 /* FindViewData.swift in Sources */,
 				FCC3E02C23357DB600142EA1 /* toString.swift in Sources */,
-				FCA329DE233758BC00CE4DDF /* SharedInfoRealmService.swift in Sources */,
+				FCA329DE233758BC00CE4DDF /* SharedCashRealmService.swift in Sources */,
 				FCA329DC2337588300CE4DDF /* RealmService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -11,7 +11,11 @@ import RealmSwift
 
 class RealmService {
     
+    // MARK: - Initializations and Deallocations
+    
     init() {}
+    
+    // MARK: - Public methods
     
     public func create<T: Object>(_ object: T) {
         let realm = try? Realm()
