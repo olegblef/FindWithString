@@ -65,51 +65,18 @@ final class FindViewController<Model: FindPresentationModelProtocol>:
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if textField == self.rootView?.findTextField {
-            let accesKey = "9a471a89261b9a66742a4cad58e65028a926e04fe462b60c754827fa4196abfe"
-            let secretKey = "800ac52a5eea1185b24036154a24cdc2a7f0dcb97781c61766f569e3dfb0a7ba"
- 
-            if let url = URL(string: "https://api.unsplash.com/search/photos?query=\(textField.text!)") {
-                
-                var request = URLRequest(url: url)
-                request.httpMethod = "GET"
-                
-                request.setValue("Client-ID \(accesKey)", forHTTPHeaderField: "Authorization")
-                
-                let task = URLSession.shared.dataTask(with: request) { data, response, error in
-                    
-                    if let err = error {
-                        print("Error: \(err)")
-                        return
-                    }
-                    
-                    if let http = response as? HTTPURLResponse {
-                        if http.statusCode == 200 {
-                            data.do {
-                                let newValue = try? JSONDecoder().decode(Unsplash.self, from: $0)
-                                let imageString = newValue?.results.first?.urls.small
-                                DispatchQueue.global().async {
-                                    imageString.do {
-                                        let imUrl: URL = URL(string: $0)!
-                                        if let data = try? Data(contentsOf: imUrl) {
-                                            if let image = UIImage(data: data) {
-                                                DispatchQueue.main.async { [weak self] in
-                                                    self?.viewData.addCash?(Cash(image, textField.text ?? ""))
-                                                    textField.resignFirstResponder()
-                                                }
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        } else {
-                            self.getAlert()
-                        }
-                    }
-                }
-                task.resume()
+            let service = APIService()
+            textField.text.do { [weak self] text in
+                service.getImage(text: text,
+                                 completion: {
+                                    self?.viewData.addCash?(Cash($0, text))
+                                    textField.resignFirstResponder()
+                },
+                                 alert: {
+                                    self?.getAlert()
+                })
             }
         }
         return true
     }
 }
-

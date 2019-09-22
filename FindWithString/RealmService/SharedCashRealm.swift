@@ -13,14 +13,14 @@ import RealmSwift
     
     // MARK: - Dynamic properties
     
-    dynamic var image: UIImage = UIImage()
+    dynamic var pathString: String = ""
     dynamic var text: String = ""
     
     // MARK: - Initializations and Deallocations
     
     convenience init(cash: SharedCash) {
         self.init()
-        self.image = cash.image
+        self.pathString = cash.pathString
         self.text = cash.text
     }
 }

@@ -17,7 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
         let window = UIWindow(frame: UIScreen.main.bounds)
-        let startVC = FindViewController(model: FindPresentationModel())
+        let startVC = FindViewController(model: FindPresentationModel(SharedCashRealmService()))
         
         window.rootViewController = startVC
         window.makeKeyAndVisible()

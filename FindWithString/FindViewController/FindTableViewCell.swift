@@ -14,21 +14,11 @@ class FindTableViewCell: UITableViewCell, Renderable, Cashable {
     
     typealias ViewData = Cash
 
-    // MARK: - Internal properties
-
-    let label = PaddingLabel(top: 0, bottom: 0, left: 10, right: 20)
-    let photo = UIImageView()
-    let line = UIView()
-
-//    var textString: String = "" {
-//        willSet {
-//            self.label.text = newValue
-//        }
-//    }
-    
     // MARK: - Private properties
 
-//    private var state: State?
+    private let label = PaddingLabel(top: 0, bottom: 0, left: 10, right: 20)
+    private let photo = UIImageView()
+    private let line = UIView()
     
     private let offset: CGFloat = 10
     private let photoSize: CGFloat = 80
@@ -113,7 +103,6 @@ class FindTableViewCell: UITableViewCell, Renderable, Cashable {
 
     func render(viewData state: Cash) {
         self.label.text = state.1
-        self.photo.image = state.0
-//        self.state = state
+        self.photo.image = imageFromString(state.0)
     }
 }

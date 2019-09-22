@@ -16,7 +16,10 @@
 		FCA329DC2337588300CE4DDF /* RealmService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA329DB2337588300CE4DDF /* RealmService.swift */; };
 		FCA329DE233758BC00CE4DDF /* SharedCashRealmService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA329DD233758BC00CE4DDF /* SharedCashRealmService.swift */; };
 		FCA329E023378F2D00CE4DDF /* Unsplash.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA329DF23378F2D00CE4DDF /* Unsplash.swift */; };
-		FCA329E62337B18A00CE4DDF /* load.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA329E52337B18A00CE4DDF /* load.swift */; };
+		FCA329E82337B8D000CE4DDF /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA329E72337B8D000CE4DDF /* APIService.swift */; };
+		FCA329EA2337C56100CE4DDF /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA329E92337C56100CE4DDF /* Storage.swift */; };
+		FCA329EC2337CAE700CE4DDF /* imageFromString.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA329EB2337CAE700CE4DDF /* imageFromString.swift */; };
+		FCA329EF2337DC9500CE4DDF /* ImageDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA329EE2337DC9500CE4DDF /* ImageDataProvider.swift */; };
 		FCB0FCB1233559FF0072E5F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB0FCB0233559FF0072E5F9 /* AppDelegate.swift */; };
 		FCB0FCB3233559FF0072E5F9 /* FindViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB0FCB2233559FF0072E5F9 /* FindViewController.swift */; };
 		FCB0FCB823355A010072E5F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FCB0FCB723355A010072E5F9 /* Assets.xcassets */; };
@@ -66,7 +69,10 @@
 		FCA329DB2337588300CE4DDF /* RealmService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmService.swift; sourceTree = "<group>"; };
 		FCA329DD233758BC00CE4DDF /* SharedCashRealmService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedCashRealmService.swift; sourceTree = "<group>"; };
 		FCA329DF23378F2D00CE4DDF /* Unsplash.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Unsplash.swift; sourceTree = "<group>"; };
-		FCA329E52337B18A00CE4DDF /* load.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = load.swift; sourceTree = "<group>"; };
+		FCA329E72337B8D000CE4DDF /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		FCA329E92337C56100CE4DDF /* Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
+		FCA329EB2337CAE700CE4DDF /* imageFromString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = imageFromString.swift; sourceTree = "<group>"; };
+		FCA329EE2337DC9500CE4DDF /* ImageDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDataProvider.swift; sourceTree = "<group>"; };
 		FCB0FCAD233559FF0072E5F9 /* FindWithString.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FindWithString.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCB0FCB0233559FF0072E5F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FCB0FCB2233559FF0072E5F9 /* FindViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindViewController.swift; sourceTree = "<group>"; };
@@ -143,6 +149,7 @@
 				FCA329D92337580C00CE4DDF /* SharedCashRealm.swift */,
 				FCA329DB2337588300CE4DDF /* RealmService.swift */,
 				FCA329DD233758BC00CE4DDF /* SharedCashRealmService.swift */,
+				FCA329E92337C56100CE4DDF /* Storage.swift */,
 			);
 			path = RealmService;
 			sourceTree = "<group>";
@@ -151,8 +158,17 @@
 			isa = PBXGroup;
 			children = (
 				FCA329DF23378F2D00CE4DDF /* Unsplash.swift */,
+				FCA329E72337B8D000CE4DDF /* APIService.swift */,
 			);
 			path = APIService;
+			sourceTree = "<group>";
+		};
+		FCA329ED2337DC7500CE4DDF /* ImageDataProviderService */ = {
+			isa = PBXGroup;
+			children = (
+				FCA329EE2337DC9500CE4DDF /* ImageDataProvider.swift */,
+			);
+			path = ImageDataProviderService;
 			sourceTree = "<group>";
 		};
 		FCB0FCA4233559FF0072E5F9 = {
@@ -179,6 +195,7 @@
 			isa = PBXGroup;
 			children = (
 				FCB0FCB0233559FF0072E5F9 /* AppDelegate.swift */,
+				FCA329ED2337DC7500CE4DDF /* ImageDataProviderService */,
 				FCA329D62337573500CE4DDF /* APIService */,
 				FCA329D52337571600CE4DDF /* RealmService */,
 				FCC3E00823355D4000142EA1 /* FindViewController */,
@@ -241,7 +258,7 @@
 			children = (
 				FCC3E01123355E0000142EA1 /* cast.swift */,
 				FCC3E02B23357DB600142EA1 /* toString.swift */,
-				FCA329E52337B18A00CE4DDF /* load.swift */,
+				FCA329EB2337CAE700CE4DDF /* imageFromString.swift */,
 			);
 			path = Functions;
 			sourceTree = "<group>";
@@ -436,7 +453,9 @@
 			files = (
 				FCC3E026233571F700142EA1 /* PaddingTextField.swift in Sources */,
 				FCB0FCB3233559FF0072E5F9 /* FindViewController.swift in Sources */,
+				FCA329E82337B8D000CE4DDF /* APIService.swift in Sources */,
 				FCB0FCB1233559FF0072E5F9 /* AppDelegate.swift in Sources */,
+				FCA329EC2337CAE700CE4DDF /* imageFromString.swift in Sources */,
 				FCC3E01023355DDD00142EA1 /* RootViewGettable.swift in Sources */,
 				FC2FF52523368258008A9DA7 /* Optional+Extension.swift in Sources */,
 				FCC3E0282335758E00142EA1 /* FindTableViewCell.swift in Sources */,
@@ -450,8 +469,8 @@
 				FCA329DA2337580C00CE4DDF /* SharedCashRealm.swift in Sources */,
 				FCC3E01C233561D100142EA1 /* BasePresentationModel.swift in Sources */,
 				FCC3E01A2335603500142EA1 /* FindPresentationModelProtocol.swift in Sources */,
+				FCA329EF2337DC9500CE4DDF /* ImageDataProvider.swift in Sources */,
 				FCC3E0242335671100142EA1 /* StandartView.swift in Sources */,
-				FCA329E62337B18A00CE4DDF /* load.swift in Sources */,
 				FCC3E01223355E0000142EA1 /* cast.swift in Sources */,
 				FCC3E01E2335621200142EA1 /* BaseViewData.swift in Sources */,
 				FCA329D82337577B00CE4DDF /* SharedCash.swift in Sources */,
@@ -461,6 +480,7 @@
 				FCC3E00C23355D9200142EA1 /* FindViewData.swift in Sources */,
 				FCC3E02C23357DB600142EA1 /* toString.swift in Sources */,
 				FCA329DE233758BC00CE4DDF /* SharedCashRealmService.swift in Sources */,
+				FCA329EA2337C56100CE4DDF /* Storage.swift in Sources */,
 				FCA329DC2337588300CE4DDF /* RealmService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

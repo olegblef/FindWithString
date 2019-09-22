@@ -15,6 +15,8 @@ final class FindPresentationModel: BasePresentationModel<FindViewData>,
     
     // MARK: - Private properties
     
+    private var store: SharedCashRealmService
+    
     private let (lifetime, token) = Lifetime.make()
 
     private let findText = MutableProperty<String?>(nil)
@@ -23,8 +25,9 @@ final class FindPresentationModel: BasePresentationModel<FindViewData>,
     
     // MARK: - Initializations and Deallocations
     
-    init() {
+    init(_ store: SharedCashRealmService) {
         let dataInternal = MutableProperty<FindViewData>(FindViewData.initial)
+        self.store = store
         super.init(dataInternal: dataInternal)
         self.setupData()
     }
@@ -53,10 +56,13 @@ final class FindPresentationModel: BasePresentationModel<FindViewData>,
     }
     
     private func addCash(_ value: Cash) {
-        if value.1.count >= 3 {
-            self.cashArray.value?.append(value)
-            self.findText.value = nil
-        }
+        self.saveRequest(SharedCash(pathString: value.0, text: value.1))
+        self.cashArray.value?.append(value)
+        self.findText.value = nil
+    }
+    
+    private func saveRequest(_ request: SharedCash) {
+        self.store.create(cash: SharedCashRealm(cash: request))
     }
 }
 

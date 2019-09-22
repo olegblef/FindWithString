@@ -9,6 +9,6 @@
 import UIKit
 
 protocol Cashable {
-    typealias Cash = (UIImage, String)
+    typealias Cash = (String, String)
 }
 

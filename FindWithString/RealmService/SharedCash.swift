@@ -12,20 +12,20 @@ class SharedCash: Equatable {
     
     // MARK: - Internal properties
     
-    var image: UIImage = UIImage()
+    var pathString: String = ""
     var text: String = ""
     
     // MARK: - Initializations and Deallocations
     
-    init(image: UIImage, text: String) {
-        self.image = image
+    init(pathString: String, text: String) {
+        self.pathString = pathString
         self.text = text
     }
     
     // MARK: - Static methods
     
     static func == (lhs: SharedCash, rhs: SharedCash) -> Bool {
-        if lhs.image == rhs.image && lhs.text == rhs.text {
+        if lhs.pathString == rhs.pathString && lhs.text == rhs.text {
             return true
         } else {
             return false
