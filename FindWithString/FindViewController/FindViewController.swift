@@ -64,14 +64,17 @@ final class FindViewController<Model: FindPresentationModelProtocol>:
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if textField == self.rootView?.findTextField {
-            let publicKey = "9a471a89261b9a66742a4cad58e65028a926e04fe462b60c754827fa4196abfe"
-            let privateKey = "800ac52a5eea1185b24036154a24cdc2a7f0dcb97781c61766f569e3dfb0a7ba"
+            let accesKey = "9a471a89261b9a66742a4cad58e65028a926e04fe462b60c754827fa4196abfe"
+            let secretKey = "800ac52a5eea1185b24036154a24cdc2a7f0dcb97781c61766f569e3dfb0a7ba"
  
-            let config = URLSessionConfiguration.default
-            let session = URLSession(configuration: config)
-            if let url = URL(string: "https://api.unsplash.com/") {
+            if let url = URL(string: "https://api.unsplash.com/search/photos?query=\(textField.text!)") {
                 
-                let task = session.dataTask(with: url, completionHandler: {data, response, error in
+                var request = URLRequest(url: url)
+                request.httpMethod = "GET"
+                
+                request.setValue("Client-ID \(accesKey)", forHTTPHeaderField: "Authorization")
+                
+                let task = URLSession.shared.dataTask(with: request) { data, response, error in
                     
                     if let err = error {
                         print("Error: \(err)")
@@ -79,12 +82,17 @@ final class FindViewController<Model: FindPresentationModelProtocol>:
                     }
                     
                     if let http = response as? HTTPURLResponse {
-                        guard let image = UIImage(named: "cat") else { return }
+                        guard let imageCustom = UIImage(named: "cat") else { return }
                         if http.statusCode == 200 {
                             data.do {
-                                let downloadedImage = UIImage(data: $0)
+//                                let testData = try? JSONSerialization.jsonObject(with: $0, options: .allowFragments)
+                                
+                                let newValue = try? JSONDecoder().decode(Unsplash.self, from: $0)
+                                let image = newValue?.results.first?.urls.small
+                                let downloadedImage = UIImage(named: image ?? "cat")
+                                
                                 DispatchQueue.main.async { [weak self] in
-                                    self?.viewData.addCash?(Cash(downloadedImage ?? image, textField.text ?? ""))
+                                    self?.viewData.addCash?(Cash(downloadedImage ?? imageCustom, textField.text ?? ""))
                                     textField.resignFirstResponder()
                                 }
                             }
@@ -92,7 +100,7 @@ final class FindViewController<Model: FindPresentationModelProtocol>:
                             self.getAlert()
                         }
                     }
-                })
+                }
                 task.resume()
             }
         }
