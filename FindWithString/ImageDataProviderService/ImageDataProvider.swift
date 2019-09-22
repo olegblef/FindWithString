@@ -59,18 +59,3 @@ final class ImageDataProvider {
         }
     }
 }
-
-final class ImageCache {
-    private let cache = NSCache<NSURL, CGImage>()
-    private let queue = DispatchQueue(label: "imageCacheQueue", qos: .utility)
-    
-    func store(image: CGImage, for url: URL) {
-        self.queue.async { [weak self] in
-            self?.cache.setObject(image, forKey: url as NSURL)
-        }
-    }
-    
-    func image(for url: URL) -> CGImage? {
-        return self.cache.object(forKey: url as NSURL)
-    }
-}

@@ -20,6 +20,7 @@
 		FCA329EA2337C56100CE4DDF /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA329E92337C56100CE4DDF /* Storage.swift */; };
 		FCA329EC2337CAE700CE4DDF /* imageFromString.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA329EB2337CAE700CE4DDF /* imageFromString.swift */; };
 		FCA329EF2337DC9500CE4DDF /* ImageDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA329EE2337DC9500CE4DDF /* ImageDataProvider.swift */; };
+		FCA329F12337F80800CE4DDF /* ImageCashe.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA329F02337F80800CE4DDF /* ImageCashe.swift */; };
 		FCB0FCB1233559FF0072E5F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB0FCB0233559FF0072E5F9 /* AppDelegate.swift */; };
 		FCB0FCB3233559FF0072E5F9 /* FindViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB0FCB2233559FF0072E5F9 /* FindViewController.swift */; };
 		FCB0FCB823355A010072E5F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FCB0FCB723355A010072E5F9 /* Assets.xcassets */; };
@@ -73,6 +74,7 @@
 		FCA329E92337C56100CE4DDF /* Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
 		FCA329EB2337CAE700CE4DDF /* imageFromString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = imageFromString.swift; sourceTree = "<group>"; };
 		FCA329EE2337DC9500CE4DDF /* ImageDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDataProvider.swift; sourceTree = "<group>"; };
+		FCA329F02337F80800CE4DDF /* ImageCashe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCashe.swift; sourceTree = "<group>"; };
 		FCB0FCAD233559FF0072E5F9 /* FindWithString.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FindWithString.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCB0FCB0233559FF0072E5F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FCB0FCB2233559FF0072E5F9 /* FindViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindViewController.swift; sourceTree = "<group>"; };
@@ -167,6 +169,7 @@
 			isa = PBXGroup;
 			children = (
 				FCA329EE2337DC9500CE4DDF /* ImageDataProvider.swift */,
+				FCA329F02337F80800CE4DDF /* ImageCashe.swift */,
 			);
 			path = ImageDataProviderService;
 			sourceTree = "<group>";
@@ -469,6 +472,7 @@
 				FCA329DA2337580C00CE4DDF /* SharedCashRealm.swift in Sources */,
 				FCC3E01C233561D100142EA1 /* BasePresentationModel.swift in Sources */,
 				FCC3E01A2335603500142EA1 /* FindPresentationModelProtocol.swift in Sources */,
+				FCA329F12337F80800CE4DDF /* ImageCashe.swift in Sources */,
 				FCA329EF2337DC9500CE4DDF /* ImageDataProvider.swift in Sources */,
 				FCC3E0242335671100142EA1 /* StandartView.swift in Sources */,
 				FCC3E01223355E0000142EA1 /* cast.swift in Sources */,

@@ -12,11 +12,15 @@ typealias ImageCompletion = ((UIImage) -> ())?
 
 func imageFromString(_ requestUrl: String) -> UIImage {
     var result = UIImage()
-    let imUrl: URL = URL(string: requestUrl)!
-    if let data = try? Data(contentsOf: imUrl) {
-        if let image = UIImage(data: data) {
-            result = image
+    let finalUrl = URL(string: requestUrl)
+    finalUrl.do {
+        let imUrl: URL = $0
+        if let data = try? Data(contentsOf: imUrl) {
+            if let image = UIImage(data: data) {
+                result = image
+            }
         }
     }
+    
     return result
 }
