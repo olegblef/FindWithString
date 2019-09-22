@@ -10,13 +10,21 @@ import UIKit
 
 final class ImageDataProvider {
     
+    // MARK: - Static properties
+    
     static let shared = ImageDataProvider()
     
+    // MARK: - Initializations and Deallocations
+    
     private init() {}
+    
+    // MARK: - Private properties
     
     private lazy var session = URLSession(configuration: .default)
     private let fileManager = FileManager()
     private let cache = ImageCache()
+    
+    // MARK: - Internal methods
     
     func load(urlString: String, handler: @escaping ((CGImage) -> Void)) {
         guard let url = URL(string: urlString) else { return }
@@ -31,6 +39,8 @@ final class ImageDataProvider {
                 .resume()
         }
     }
+    
+      // MARK - Private methods
     
     private func handleDownload(response: URLResponse?, locationUrl: URL?, handler: @escaping ((CGImage) -> Void)) {
         guard

@@ -48,6 +48,9 @@ class APIService {
             if http.statusCode == 200 {
                 data.do {
                     let newValue = try? JSONDecoder().decode(Unsplash.self, from: $0)
+                    if newValue?.results.isEmpty ?? false {
+                        alert?()
+                    }
                     let imageString = newValue?.results.randomElement()?.urls.small
                     DispatchQueue.global(qos: .background).async {
                         imageString.do { requestUrl in

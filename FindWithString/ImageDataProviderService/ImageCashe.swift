@@ -9,8 +9,13 @@
 import UIKit
 
 final class ImageCache {
+    
+    // MARK: - Private properties
+    
     private let cache = NSCache<NSURL, CGImage>()
     private let queue = DispatchQueue(label: "imageCacheQueue", qos: .utility)
+    
+    // MARK: - Internet methods
     
     func store(image: CGImage, for url: URL) {
         self.queue.async { [weak self] in
