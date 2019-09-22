@@ -68,7 +68,6 @@ final class FindPresentationModel: BasePresentationModel<FindViewData>,
     
     private func startFeeling() {
         self.store.get()?.forEach {
-            print($0.text)
             self.cashArray.value?.append($0)
         }
     }

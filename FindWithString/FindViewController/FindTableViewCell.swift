@@ -54,28 +54,27 @@ class FindTableViewCell: UITableViewCell, Renderable, Cashable {
         }
 
         NSLayoutConstraint.activate([
+            contentView.heightAnchor.constraint(equalToConstant: self.photoSize + self.lineHeight),
+            line.heightAnchor.constraint(equalToConstant: self.lineHeight),
+            line.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
+            line.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
+            line.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
             photo.topAnchor.constraint(equalTo: contentView.topAnchor),
             photo.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
             photo.heightAnchor.constraint(equalToConstant: self.photoSize),
             photo.widthAnchor.constraint(equalToConstant: self.photoSize),
-            photo.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
+            photo.bottomAnchor.constraint(equalTo: line.topAnchor),
             label.topAnchor.constraint(equalTo: contentView.topAnchor, constant: (self.photoSize - self.labelHeight) / 2),
             label.leadingAnchor.constraint(equalTo: photo.trailingAnchor, constant: self.offset),
             label.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
-            label.heightAnchor.constraint(equalToConstant: self.labelHeight),
-            line.heightAnchor.constraint(equalToConstant: self.lineHeight),
-            line.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
-            line.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
-            line.bottomAnchor.constraint(equalTo: contentView.bottomAnchor)
+            label.heightAnchor.constraint(equalToConstant: self.labelHeight)
             ])
 
         photo.setContentHuggingPriority(UILayoutPriority(749), for: .horizontal)
         label.setContentHuggingPriority(UILayoutPriority(249), for: .horizontal)
         
         self.setupLabel()
-        self.setupPhoto()
         self.setupLine()
-        self.layoutIfNeeded()
     }
     
     private func setupLabel() {
@@ -83,10 +82,6 @@ class FindTableViewCell: UITableViewCell, Renderable, Cashable {
         
         label.textAlignment = .left
         label.textColor = self.labelTextColor
-    }
-    
-    private func setupPhoto() {
-    
     }
     
     private func setupLine() {
@@ -100,15 +95,5 @@ class FindTableViewCell: UITableViewCell, Renderable, Cashable {
     func render(viewData state: Cash) {
         self.titleLabel.text = state.text
         self.photoImageView.load(state.pathString)
-    }
-}
-
-extension UIImageView {
-    func load(_ string: String) {
-        ImageDataProvider.shared.load(urlString: string) { [weak self] cg in
-            DispatchQueue.main.async {
-                self?.image = UIImage(cgImage: cg)
-            }
-        }
     }
 }

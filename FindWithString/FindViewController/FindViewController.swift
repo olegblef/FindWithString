@@ -67,9 +67,9 @@ final class FindViewController<Model: FindPresentationModelProtocol>:
         return cell ?? UITableViewCell()
     }
     
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 80
-    }
+//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+//        return 300
+//    }
     
     // MARK: - UITextFieldDelegate
     

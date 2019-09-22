@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B05A39146291544F30A71B72 /* Pods_FindWithString.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2DDB2582A8C74C05F86F5FA /* Pods_FindWithString.framework */; };
+		FC18A64823381F90000781A7 /* UIImageView + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC18A64723381F90000781A7 /* UIImageView + Extensions.swift */; };
 		FC2FF52523368258008A9DA7 /* Optional+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2FF52423368258008A9DA7 /* Optional+Extension.swift */; };
 		FC2FF5322336D6AD008A9DA7 /* Cashable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2FF5312336D6AD008A9DA7 /* Cashable.swift */; };
 		FCA329D82337577B00CE4DDF /* SharedCash.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA329D72337577B00CE4DDF /* SharedCash.swift */; };
@@ -46,6 +47,7 @@
 		0D96111B5DD8DC7096033854 /* Pods-FindWithString.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FindWithString.release.xcconfig"; path = "Target Support Files/Pods-FindWithString/Pods-FindWithString.release.xcconfig"; sourceTree = "<group>"; };
 		AE0129672C1DE00B8C37A258 /* Pods-FindWithString.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FindWithString.debug.xcconfig"; path = "Target Support Files/Pods-FindWithString/Pods-FindWithString.debug.xcconfig"; sourceTree = "<group>"; };
 		D2DDB2582A8C74C05F86F5FA /* Pods_FindWithString.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FindWithString.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC18A64723381F90000781A7 /* UIImageView + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView + Extensions.swift"; sourceTree = "<group>"; };
 		FC2FF52423368258008A9DA7 /* Optional+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Optional+Extension.swift"; sourceTree = "<group>"; };
 		FC2FF5312336D6AD008A9DA7 /* Cashable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cashable.swift; sourceTree = "<group>"; };
 		FCA329D72337577B00CE4DDF /* SharedCash.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedCash.swift; sourceTree = "<group>"; };
@@ -224,6 +226,7 @@
 			isa = PBXGroup;
 			children = (
 				FC2FF52423368258008A9DA7 /* Optional+Extension.swift */,
+				FC18A64723381F90000781A7 /* UIImageView + Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -361,6 +364,7 @@
 				FCB0FCB1233559FF0072E5F9 /* AppDelegate.swift in Sources */,
 				FCC3E01023355DDD00142EA1 /* RootViewGettable.swift in Sources */,
 				FC2FF52523368258008A9DA7 /* Optional+Extension.swift in Sources */,
+				FC18A64823381F90000781A7 /* UIImageView + Extensions.swift in Sources */,
 				FCC3E0282335758E00142EA1 /* FindTableViewCell.swift in Sources */,
 				FCA329E023378F2D00CE4DDF /* Unsplash.swift in Sources */,
 				FCC3E01823355FCC00142EA1 /* Renderable.swift in Sources */,
