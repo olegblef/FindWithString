@@ -9,6 +9,7 @@
 import UIKit
 import ReactiveSwift
 import ReactiveCocoa
+import Foundation
 
 final class FindViewController<Model: FindPresentationModelProtocol>:
                                 BasePresentationModelViewController<Model, FindView>,
@@ -82,18 +83,22 @@ final class FindViewController<Model: FindPresentationModelProtocol>:
                     }
                     
                     if let http = response as? HTTPURLResponse {
-                        guard let imageCustom = UIImage(named: "cat") else { return }
                         if http.statusCode == 200 {
                             data.do {
-//                                let testData = try? JSONSerialization.jsonObject(with: $0, options: .allowFragments)
-                                
                                 let newValue = try? JSONDecoder().decode(Unsplash.self, from: $0)
-                                let image = newValue?.results.first?.urls.small
-                                let downloadedImage = UIImage(named: image ?? "cat")
-                                
-                                DispatchQueue.main.async { [weak self] in
-                                    self?.viewData.addCash?(Cash(downloadedImage ?? imageCustom, textField.text ?? ""))
-                                    textField.resignFirstResponder()
+                                let imageString = newValue?.results.first?.urls.small
+                                DispatchQueue.global().async {
+                                    imageString.do {
+                                        let imUrl: URL = URL(string: $0)!
+                                        if let data = try? Data(contentsOf: imUrl) {
+                                            if let image = UIImage(data: data) {
+                                                DispatchQueue.main.async { [weak self] in
+                                                    self?.viewData.addCash?(Cash(image, textField.text ?? ""))
+                                                    textField.resignFirstResponder()
+                                                }
+                                            }
+                                        }
+                                    }
                                 }
                             }
                         } else {
