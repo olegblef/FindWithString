@@ -18,7 +18,8 @@ final class ImageDataProvider {
     private let fileManager = FileManager()
     private let cache = ImageCache()
     
-    func load(url: URL, handler: @escaping ((CGImage) -> Void)) {
+    func load(urlString: String, handler: @escaping ((CGImage) -> Void)) {
+        guard let url = URL(string: urlString) else { return }
         DispatchQueue.global(qos: .utility).async {
             if let cachedImage = self.cache.image(for: url) {
                 handler(cachedImage)

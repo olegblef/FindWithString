@@ -18,6 +18,10 @@ final class FindViewController<Model: FindPresentationModelProtocol>:
                                 UITextFieldDelegate,
                                 Cashable {
     
+    // MARK: - Private properties
+    
+    private let service = APIService()
+    
     // MARK: - Override methods
     
     override func viewDidLoad() {
@@ -55,19 +59,24 @@ final class FindViewController<Model: FindPresentationModelProtocol>:
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: toString(FindTableViewCell.self), for: indexPath) as! FindTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: toString(FindTableViewCell.self), for: indexPath) as? FindTableViewCell
         let item = self.viewData.cashArray?[indexPath.row]
         item.do {
-            cell.render(viewData: $0)
+            cell?.render(viewData: $0)
         }
-        return cell
+        return cell ?? UITableViewCell()
     }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 80
+    }
+    
+    // MARK: - UITextFieldDelegate
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if textField == self.rootView?.findTextField {
-            let service = APIService()
             textField.text.do { [weak self] text in
-                service.getImage(text: text,
+                self?.service.getImage(text: text,
                                  completion: {
                                     self?.viewData.addCash?(SharedCashRealm(cash: SharedCash(pathString: $0, text: text)))
                                     textField.resignFirstResponder()

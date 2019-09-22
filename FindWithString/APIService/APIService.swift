@@ -49,7 +49,7 @@ class APIService {
                 data.do {
                     let newValue = try? JSONDecoder().decode(Unsplash.self, from: $0)
                     let imageString = newValue?.results.randomElement()?.urls.small
-                    DispatchQueue.global().async {
+                    DispatchQueue.global(qos: .background).async {
                         imageString.do { requestUrl in
                             DispatchQueue.main.async {
                                 completion?(requestUrl)

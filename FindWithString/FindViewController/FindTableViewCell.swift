@@ -12,8 +12,8 @@ class FindTableViewCell: UITableViewCell, Renderable, Cashable {
 
     // MARK: - Private properties
 
-    private let label = PaddingLabel(top: 0, bottom: 0, left: 10, right: 20)
-    private let photo = UIImageView()
+    private let titleLabel = PaddingLabel(top: 0, bottom: 0, left: 10, right: 20)
+    private let photoImageView = UIImageView()
     private let line = UIView()
     
     private let offset: CGFloat = 10
@@ -43,8 +43,8 @@ class FindTableViewCell: UITableViewCell, Renderable, Cashable {
     // MARK: - Private methods
 
     private func setupUI() {
-        let label = self.label
-        let photo = self.photo
+        let label = self.titleLabel
+        let photo = self.photoImageView
         let line = self.line
         let contentView = self.contentView
 
@@ -79,7 +79,7 @@ class FindTableViewCell: UITableViewCell, Renderable, Cashable {
     }
     
     private func setupLabel() {
-        let label = self.label
+        let label = self.titleLabel
         
         label.textAlignment = .left
         label.textColor = self.labelTextColor
@@ -98,7 +98,17 @@ class FindTableViewCell: UITableViewCell, Renderable, Cashable {
     // MARK: - Renderable
 
     func render(viewData state: Cash) {
-        self.label.text = state.text
-        self.photo.image = imageFromString(state.pathString)
+        self.titleLabel.text = state.text
+        self.photoImageView.load(state.pathString)
+    }
+}
+
+extension UIImageView {
+    func load(_ string: String) {
+        ImageDataProvider.shared.load(urlString: string) { [weak self] cg in
+            DispatchQueue.main.async {
+                self?.image = UIImage(cgImage: cg)
+            }
+        }
     }
 }

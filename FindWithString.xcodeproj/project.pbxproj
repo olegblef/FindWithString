@@ -16,7 +16,6 @@
 		FCA329DE233758BC00CE4DDF /* SharedCashRealmService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA329DD233758BC00CE4DDF /* SharedCashRealmService.swift */; };
 		FCA329E023378F2D00CE4DDF /* Unsplash.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA329DF23378F2D00CE4DDF /* Unsplash.swift */; };
 		FCA329E82337B8D000CE4DDF /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA329E72337B8D000CE4DDF /* APIService.swift */; };
-		FCA329EC2337CAE700CE4DDF /* imageFromString.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA329EB2337CAE700CE4DDF /* imageFromString.swift */; };
 		FCA329EF2337DC9500CE4DDF /* ImageDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA329EE2337DC9500CE4DDF /* ImageDataProvider.swift */; };
 		FCA329F12337F80800CE4DDF /* ImageCashe.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA329F02337F80800CE4DDF /* ImageCashe.swift */; };
 		FCB0FCB1233559FF0072E5F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB0FCB0233559FF0072E5F9 /* AppDelegate.swift */; };
@@ -55,7 +54,6 @@
 		FCA329DD233758BC00CE4DDF /* SharedCashRealmService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedCashRealmService.swift; sourceTree = "<group>"; };
 		FCA329DF23378F2D00CE4DDF /* Unsplash.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Unsplash.swift; sourceTree = "<group>"; };
 		FCA329E72337B8D000CE4DDF /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
-		FCA329EB2337CAE700CE4DDF /* imageFromString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = imageFromString.swift; sourceTree = "<group>"; };
 		FCA329EE2337DC9500CE4DDF /* ImageDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDataProvider.swift; sourceTree = "<group>"; };
 		FCA329F02337F80800CE4DDF /* ImageCashe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCashe.swift; sourceTree = "<group>"; };
 		FCB0FCAD233559FF0072E5F9 /* FindWithString.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FindWithString.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -218,7 +216,6 @@
 			children = (
 				FCC3E01123355E0000142EA1 /* cast.swift */,
 				FCC3E02B23357DB600142EA1 /* toString.swift */,
-				FCA329EB2337CAE700CE4DDF /* imageFromString.swift */,
 			);
 			path = Functions;
 			sourceTree = "<group>";
@@ -362,7 +359,6 @@
 				FCB0FCB3233559FF0072E5F9 /* FindViewController.swift in Sources */,
 				FCA329E82337B8D000CE4DDF /* APIService.swift in Sources */,
 				FCB0FCB1233559FF0072E5F9 /* AppDelegate.swift in Sources */,
-				FCA329EC2337CAE700CE4DDF /* imageFromString.swift in Sources */,
 				FCC3E01023355DDD00142EA1 /* RootViewGettable.swift in Sources */,
 				FC2FF52523368258008A9DA7 /* Optional+Extension.swift in Sources */,
 				FCC3E0282335758E00142EA1 /* FindTableViewCell.swift in Sources */,
