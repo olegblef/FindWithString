@@ -34,10 +34,10 @@ final class ImageDataProvider {
                 return
             }
             
-            self.session.downloadTask(with: url) { [weak self] locationUrl, response, error in
-                self?.download(urlResponse: locationUrl, handler: handler) }
-                .resume()
-        }
+            self.session.downloadTask(with: url) { [weak self] _, _, _ in
+                    self?.download(urlResponse: url, handler: handler) }
+                    .resume()
+            }
     }
     
       // MARK - Private methods
