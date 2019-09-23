@@ -24,7 +24,15 @@ class APIService {
     
     func getImage(text: String, completion: ImageCompletion, alert: VoidCompletion) {
         
-        if let url = URL(string: "https://api.unsplash.com/search/photos?query=\(text))") {
+        var urlComponents = URLComponents()
+        urlComponents.scheme = "https"
+        urlComponents.host = "api.unsplash.com"
+        urlComponents.path = "/search/photos"
+        urlComponents.queryItems = [
+        URLQueryItem(name: "query", value: text)
+        ]
+        
+        if let url = URL(string: urlComponents.url?.absoluteString ?? "") {
             var request = URLRequest(url: url)
             request.httpMethod = "GET"
             request.setValue("Client-ID \(self.accesKey)", forHTTPHeaderField: "Authorization")
